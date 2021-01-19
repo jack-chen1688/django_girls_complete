@@ -26,6 +26,8 @@ jobs:
           path: test-reports/
           destination: python_app
   deploy:
+    docker:
+      - image: circleci/python:3.9.0
     steps:
       - checkout
       - run:
